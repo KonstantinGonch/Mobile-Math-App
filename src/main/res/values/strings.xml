@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mobile Maths</string>
+    <string name="title_activity_choose">Выберите Действие</string>
+    <string name="determinant">Рассчитать определитель матрицы</string>
+    <string name="kramer">Найти решение СЛАУ методом Крамера</string>
+    <string name="gcd">Найти НОД двух натуральных чисел</string>
+    <string name="revmat">Найти обратную матрицу</string>
+    <string name="matval">Размерность матрицы: </string>
+    <string name="ok">OK</string>
+    <string name="matvolhint">Впишите одно число</string>
+    <string name="unsuppform">Недопустимый формат данных</string>
+    <string name="fnum">Первое число</string>
+    <string name="snum">Второе число</string>
+    <string name="nod">НОД чисел</string>
+    <string name="dataplease">Введите данные</string>
+    <string name="errormatr">Размерность матрицы должна быть 2 или больше</string>
+    <string name="freemembers">Св. члены</string>
+    <string name="errinmat">Некоторые поля имеют недопустимый формат</string>
+    <string name="fin">Итог</string>
+    <string name="norevmat">Невозможно обнаружить обратную матрицу, так как определитель равен 0</string>
+    <string name="binome">Разложить двучлен по биному Ньютона</string>
+    <string name="chtype">Тип :</string>
+    <string name="chpower">Степень двучлена :</string>
+    <string-array name="binometypes">
+        <item>Две переменных</item>
+        <item>Переменная и константа</item>
+    </string-array>
+    <string name="insnum">Введите число</string>
+    <string name="adddata">Дополните выражение</string>
+    <string name = "powererr">Степень должна быть более 1 и целой</string>
+    <string name = "trace">Найти след матрицы</string>
+</resources>

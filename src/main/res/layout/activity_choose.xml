@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgr"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:id="@+id/activity_choose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.none.mobilemaths.ChooseActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id = "@+id/determbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/determinant"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id = "@+id/matvol1tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/matval"
+            android:layout_marginTop="5dp"
+            android:textColor = "@color/colorWhite"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id = "@+id/matvol1et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorLightGray"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:hint="@string/matvolhint"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id = "@+id/ok1btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+        <Button
+            android:id = "@+id/tracebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trace"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id = "@+id/matvoltrtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/matval"
+            android:layout_marginTop="5dp"
+            android:textColor = "@color/colorWhite"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id = "@+id/matvoltret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColorHint="@color/colorLightGray"
+            android:textColor="@color/colorWhite"
+            android:hint="@string/matvolhint"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id = "@+id/oktrbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+
+
+        <Button
+            android:id = "@+id/kramerbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kramer"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id = "@+id/matvol2tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/matval"
+            android:layout_marginTop="5dp"
+            android:textColor = "@color/colorWhite"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id = "@+id/matvol2et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColorHint="@color/colorLightGray"
+            android:textColor="@color/colorWhite"
+            android:hint="@string/matvolhint"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id = "@+id/ok2btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+        <Button
+            android:id = "@+id/revmatbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text = "@string/revmat"/>
+
+        <TextView
+            android:id = "@+id/matvol3tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/matval"
+            android:layout_marginTop="5dp"
+            android:textColor = "@color/colorWhite"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id = "@+id/matvol3et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColorHint="@color/colorLightGray"
+            android:textColor="@color/colorWhite"
+            android:hint="@string/matvolhint"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id = "@+id/ok3btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+        <Button
+            android:id = "@+id/binomebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/binome"
+            android:layout_gravity="center"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:id = "@+id/binometypetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text = "@string/chtype"
+                    android:layout_marginTop="5dp"
+                    android:textColor = "@color/colorWhite"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id = "@+id/binomepowertv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight = "1"
+                    android:text = "@string/chpower"
+                    android:layout_marginTop="5dp"
+                    android:textColor = "@color/colorWhite"
+                    android:textSize="17sp"
+                    android:gravity="center"/>
+            </TableRow>
+            <TableRow>
+                <Spinner android:id = "@+id/binometypespinner"
+                         android:entries="@array/binometypes"
+                         android:background="@color/colorWhite"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         android:layout_weight="1">
+
+                </Spinner>
+
+                <EditText android:id = "@+id/binomepoweret"
+                          android:textColor="@color/colorWhite"
+                          android:layout_weight="1"
+                          android:hint="@string/insnum"
+                          android:textColorHint="@color/colorLightGray"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id = "@+id/ok5btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text = "@string/ok"/>
+
+        <Button
+            android:id = "@+id/gcdBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text = "@string/gcd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation = "horizontal">
+
+            <EditText
+                android:id = "@+id/fnumEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint = "@string/fnum"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="center"
+                android:textColorHint="@color/colorLightGray"
+                android:layout_weight = "1"/>
+
+            <EditText
+                android:id = "@+id/snumEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint = "@string/snum"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="center"
+                android:textColorHint="@color/colorLightGray"
+                android:layout_weight = "1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id = "@+id/ok4btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+    </LinearLayout>
+
+</ScrollView>
