@@ -29,4 +29,6 @@
     <string name="adddata">Дополните выражение</string>
     <string name = "powererr">Степень должна быть более 1 и целой</string>
     <string name = "trace">Найти след матрицы</string>
+    <string name="silvester">Определенность матрицы по критерию Сильвестра</string>
+    <string name="mdefined">Определенность матрицы: </string>
 </resources>

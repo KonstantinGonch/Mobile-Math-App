@@ -98,4 +98,42 @@ class MathPack {
         (matrix.size()).times {res+=matrix[it][it]}
         return res
     }
+
+    def defineBySilvester(matrix)
+    {
+        def tokens = []
+        if (matrix[0][0]>0)
+            tokens << "+"
+        else if (matrix[0][0]<0)
+            tokens <<"-"
+        else if (matrix[0][0]==0)
+            return "Никак"
+        for (i in 2..matrix.size())
+        {
+            def minor = extract(matrix,i)
+            def determ = determinant(minor)
+            tokens << (determ>0 ? "+" : "-")
+            if (determ==0)
+                return "Никак"
+        }
+        if (tokens.every {it=="+"}) return "Положительно"
+        def dividedTokens =[]
+        0.step((tokens.size()%2==0 ? tokens.size() : tokens.size()-1), 2) {dividedTokens<<tokens[it..it+1]}
+        if (tokens.size()%2==1) {
+            def ch = dividedTokens.every { it == ["-", "+"] }
+            if (ch == true && tokens[-1] == "-") return "Отрицательно"
+        }
+        else
+            return ((dividedTokens.every {it==["-","+"]}) ? "Отрицательно" : "Никак")
+        return "Никак"
+
+    }
+
+    def extract(matrix, arg)
+    {
+        def newmat = []
+        arg.times {i -> newmat << matrix[i][0..<arg]}
+        return newmat
+    }
+
 }

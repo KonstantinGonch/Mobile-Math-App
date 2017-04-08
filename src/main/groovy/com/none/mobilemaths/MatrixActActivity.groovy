@@ -169,6 +169,13 @@ public class MatrixActActivity extends AppCompatActivity {
                         builder.show()
                     }
                 }
+                else if (method=="silvester")
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(thisActivity)
+                    builder.setTitle(R.string.fin)
+                    builder.setMessage(getResources().getString(R.string.mdefined)+MathPack.instance.defineBySilvester(widgets2))
+                    builder.show()
+                }
             }
             else
             {
