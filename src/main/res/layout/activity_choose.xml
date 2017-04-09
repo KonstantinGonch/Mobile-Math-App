@@ -23,6 +23,40 @@
         android:orientation="vertical">
 
         <Button
+            android:id = "@+id/silvesterbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/silvester"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id = "@+id/matvolsilvtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/matval"
+            android:layout_marginTop="5dp"
+            android:textColor = "@color/colorWhite"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id = "@+id/matvolsilvet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorLightGray"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:hint="@string/matvolhint"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id = "@+id/oksilvbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_gravity = "center"/>
+
+        <Button
             android:id = "@+id/determbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

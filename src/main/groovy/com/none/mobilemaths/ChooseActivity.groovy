@@ -14,9 +14,9 @@ import android.widget.Toast
 
 public class ChooseActivity extends AppCompatActivity {
 
-    private Button determBtn, kramerBtn, gcdBtn, ok1Btn, ok2Btn, ok3Btn, revmatBtn, ok4Btn, binomeBtn, ok5Btn, okTraceBtn, traceBtn
-    private EditText matvol1Et, matvol2Et, matvol3Et, fnumEt, snumEt, binomePowerEt, matvolTraceEt
-    private TextView matvol1Tv, matvol2Tv, matvol3Tv, binomeTypeTv, binomePowerTv, matvolTraceTv
+    private Button silvesterBtn, determBtn, kramerBtn, gcdBtn, ok1Btn, ok2Btn, ok3Btn, revmatBtn, ok4Btn, binomeBtn, ok5Btn, okTraceBtn, traceBtn, okSilvBtn
+    private EditText matvolSilvEt, matvol1Et, matvol2Et, matvol3Et, fnumEt, snumEt, binomePowerEt, matvolTraceEt
+    private TextView matvolSilvTv, matvol1Tv, matvol2Tv, matvol3Tv, binomeTypeTv, binomePowerTv, matvolTraceTv
     private Spinner binomeTypesSpinner
     private Activity thisActivity = this
 
@@ -25,18 +25,22 @@ public class ChooseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose)
 
+        silvesterBtn = findViewById(R.id.silvesterbtn) as Button
         determBtn = findViewById(R.id.determbtn) as Button
         kramerBtn = findViewById(R.id.kramerbtn) as Button
         revmatBtn = findViewById(R.id.revmatbtn) as Button
         gcdBtn = findViewById (R.id.gcdBtn) as Button
         binomeBtn = findViewById(R.id.binomebtn) as Button
         traceBtn = findViewById(R.id.tracebtn) as Button
+        okSilvBtn = findViewById(R.id.oksilvbtn) as Button
         ok1Btn = findViewById(R.id.ok1btn) as Button
         ok2Btn = findViewById(R.id.ok2btn) as Button
         ok3Btn = findViewById(R.id.ok3btn) as Button
         ok4Btn = findViewById(R.id.ok4btn) as Button
         ok5Btn = findViewById(R.id.ok5btn) as Button
         okTraceBtn = findViewById(R.id.oktrbtn) as Button
+        matvolSilvEt = findViewById(R.id.matvolsilvet) as EditText
+        matvolSilvTv = findViewById(R.id.matvolsilvtv) as TextView
         matvol1Tv = findViewById(R.id.matvol1tv) as TextView
         matvol2Tv = findViewById(R.id.matvol2tv) as TextView
         matvol3Tv = findViewById(R.id.matvol3tv) as TextView
@@ -51,13 +55,14 @@ public class ChooseActivity extends AppCompatActivity {
         binomePowerEt = findViewById(R.id.binomepoweret) as EditText
         matvolTraceEt = findViewById(R.id.matvoltret) as EditText
         binomeTypesSpinner = findViewById(R.id.binometypespinner) as Spinner
+        def silvesterCol = [okSilvBtn, matvolSilvEt, matvolSilvTv]
         def krammerCol = [ok2Btn, matvol2Et, matvol2Tv]
         def determinantCol = [ok1Btn, matvol1Et, matvol1Tv]
         def revmatCol = [ok3Btn, matvol3Et, matvol3Tv]
         def nodCol = [ok4Btn, fnumEt, snumEt]
         def binomeCol = [binomeTypeTv, binomePowerTv, binomeTypesSpinner, binomePowerEt, ok5Btn]
         def traceCol = [okTraceBtn, matvolTraceTv, matvolTraceEt]
-        def allIntWidgets = krammerCol+determinantCol+revmatCol+nodCol+binomeCol+traceCol
+        def allIntWidgets = krammerCol+determinantCol+revmatCol+nodCol+binomeCol+traceCol+silvesterCol
 
         allIntWidgets.each {View v -> if (v!=null) v.setVisibility(View.GONE)}
 
@@ -67,6 +72,8 @@ public class ChooseActivity extends AppCompatActivity {
         revmatBtn.setOnClickListener()  {v -> allIntWidgets.each() {if (it in revmatCol) it.setVisibility(View.VISIBLE) else it.setVisibility(View.GONE)}}
         gcdBtn.setOnClickListener()  {v -> allIntWidgets.each() {if (it in nodCol) it.setVisibility(View.VISIBLE) else it.setVisibility(View.GONE)}}
         binomeBtn.setOnClickListener() {v -> allIntWidgets.each() {if (it in binomeCol) it.setVisibility(View.VISIBLE) else it.setVisibility(View.GONE)}}
+        silvesterBtn.setOnClickListener() {v -> allIntWidgets.each {if (it in silvesterCol) it.setVisibility(View.VISIBLE) else it.setVisibility(View.GONE)}}
+        okSilvBtn.setOnClickListener() {v -> if(!matvolSilvEt.getText().toString().isInteger()) Toast.makeText(thisActivity, R.string.unsuppform,Toast.LENGTH_SHORT).show() else startMatrixActivity(matvolSilvEt.getText().toString().toInteger(), "silvester")}
         ok1Btn.setOnClickListener() {v -> if(!matvol1Et.getText().toString().isInteger()) Toast.makeText(thisActivity, R.string.unsuppform,Toast.LENGTH_SHORT).show() else startMatrixActivity(matvol1Et.getText().toString().toInteger(), "determinant")}
         ok2Btn.setOnClickListener() {v -> if(!matvol2Et.getText().toString().isInteger()) Toast.makeText(thisActivity, R.string.unsuppform,Toast.LENGTH_SHORT).show() else startMatrixActivity(matvol2Et.getText().toString().toInteger(), "kramer", true)}
         ok3Btn.setOnClickListener() {v -> if(!matvol3Et.getText().toString().isInteger()) Toast.makeText(thisActivity, R.string.unsuppform,Toast.LENGTH_SHORT).show() else startMatrixActivity(matvol3Et.getText().toString().toInteger(), "revmat")}
